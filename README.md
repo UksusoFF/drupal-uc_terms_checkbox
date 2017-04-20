@@ -1,5 +1,7 @@
 # Ubercart Terms Checkbox
 
+![pnwim](https://img.shields.io/badge/Drupal-7.x-blue.svg)
+
 This module simple add required checkbox in Ubercart checkout step field with link to terms and conditions.
 
 You can change link by translation interface: admin/config/regional/translate/translate
