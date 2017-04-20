@@ -1,0 +1,8 @@
+name = Ubercart Terms Checkbox
+description = Add checkbox for accept terms of use on each checkout.
+core = 7.x
+version = 7.x-1.0
+package = Ubercart
+
+dependencies[] = uc_cart
+dependencies[] = required_error_message
