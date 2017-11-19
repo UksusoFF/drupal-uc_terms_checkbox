@@ -15,7 +15,7 @@ Inspired by https://journal.tinkoff.ru/personalnye-dannye/
 Just enable the new created pane in admin/store/settings/checkout.
 
 ## Alternative modules
-* https://www.drupal.org/project/uc_legal_integration
+* https://drupal.org/project/uc_legal_integration
 * https://drupal.org/project/uc_termsofservice
 * https://drupal.org/project/uc_tc
-* https://www.drupal.org/project/fz152
+* https://drupal.org/project/fz152
