@@ -2,41 +2,47 @@
 
 function uc_terms_checkbox_theme()
 {
-    return [
-        'uc_terms_checkbox_terms_pane' => [
-            'arguments' => [
-                'form' => NULL,
-            ],
-        ],
-    ];
+  return [
+    'uc_terms_checkbox_terms_pane' => [
+      'arguments' => [
+        'form' => null,
+      ],
+    ],
+  ];
 }
 
 function uc_terms_checkbox_uc_checkout_pane()
 {
-    $panes['uc_terms_checkbox_terms'] = [
-        'callback' => 'uc_terms_checkbox_terms_pane_callback',
-        'title' => t('Terms and Conditions'),
-        'desc' => t('Please confirm if you agree with our Terms and Conditions that apply on all your purchases.'),
-        'weight' => 6,
-        'collapsible' => FALSE,
-        'enabled' => TRUE,
-    ];
-    return $panes;
+  
+  $panes['uc_terms_checkbox_terms'] = [
+    'callback' => 'uc_terms_checkbox_terms_pane_callback',
+    'title' => t('Terms and Conditions'),
+    'desc' => t('Please confirm if you agree with our Terms and Conditions that apply on all your purchases.'),
+    'weight' => 6,
+    'collapsible' => false,
+    'enabled' => true,
+  ];
+
+  return $panes;
 }
 
 function uc_terms_checkbox_terms_pane_callback($op)
 {
-    $contents = [];
-    switch ($op) {
-        case 'view':
-            $contents['terms'] = [
-                '#type' => 'checkbox',
-                '#required' =>  TRUE,
-                '#title' => t('I accept <a href="#" target="_blank">Terms and Conditions</a>.'),
-                '#default_value' => TRUE,
-                '#required_error' => t('You must accept Terms and Conditions before continue.'),
-            ];
-            break;
-    }
-    return ['contents' => $contents];
+  $contents = [];
+
+  switch ($op) {
+    case 'view':
+      $contents['terms'] = [
+        '#type' => 'checkbox',
+        '#required' => true,
+        '#title' => t('I accept <a href="#" target="_blank">Terms and Conditions</a>.'),
+        '#default_value' => true,
+        '#required_error' => t('You must accept Terms and Conditions before continue.'),
+      ];
+      break;
+  }
+
+  return [
+    'contents' => $contents
+  ];
 }
