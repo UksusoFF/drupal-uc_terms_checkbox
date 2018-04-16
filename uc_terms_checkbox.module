@@ -1,19 +1,8 @@
 <?php
 
-function uc_terms_checkbox_theme()
-{
-  return [
-    'uc_terms_checkbox_terms_pane' => [
-      'arguments' => [
-        'form' => null,
-      ],
-    ],
-  ];
-}
-
 function uc_terms_checkbox_uc_checkout_pane()
 {
-  
+
   $panes['uc_terms_checkbox_terms'] = [
     'callback' => 'uc_terms_checkbox_terms_pane_callback',
     'title' => t('Terms and Conditions'),
@@ -35,7 +24,7 @@ function uc_terms_checkbox_terms_pane_callback($op)
       $contents['terms'] = [
         '#type' => 'checkbox',
         '#required' => true,
-        '#title' => t('I accept <a href="#" target="_blank">Terms and Conditions</a>.'),
+        '#title' => theme('uc_terms_checkbox'),
         '#default_value' => true,
         '#required_error' => t('You must accept Terms and Conditions before continue.'),
       ];
@@ -45,4 +34,20 @@ function uc_terms_checkbox_terms_pane_callback($op)
   return [
     'contents' => $contents
   ];
+}
+
+function uc_terms_checkbox_theme()
+{
+  return [
+    'uc_terms_checkbox' => [
+      'arguments' => [],
+    ],
+  ];
+}
+
+function theme_uc_terms_checkbox()
+{
+  return t('I accept <a href="@link" target="_blank">Terms and Conditions</a>.', [
+    '@link' => '#'
+  ]);
 }

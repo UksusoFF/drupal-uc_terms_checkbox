@@ -28,8 +28,8 @@ msgid "Please confirm if you agree with our Terms and Conditions that apply on a
 msgstr "Пожалуста подтвердите если вы согласны с условиями использования."
 
 #: uc_terms_checkbox.module:35
-msgid "I accept <a href=\"#\" target=\"_blank\">Terms and Conditions</a>."
-msgstr "Я принимаю <a href=\"#\" target=\"_blank\">условия использования</a>."
+msgid "I accept <a href=\"@link\" target=\"_blank\">Terms and Conditions</a>."
+msgstr "Я принимаю <a href=\"@link\" target=\"_blank\">условия использования</a>."
 
 #: uc_terms_checkbox.module:37
 msgid "You must accept Terms and Conditions before continue."
