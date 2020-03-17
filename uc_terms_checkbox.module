@@ -25,7 +25,7 @@ function uc_terms_checkbox_terms_pane_callback($op)
         '#type' => 'checkbox',
         '#required' => true,
         '#title' => theme('uc_terms_checkbox'),
-        '#default_value' => true,
+        '#default_value' => false,
         '#required_error' => t('You must accept Terms and Conditions before continue.'),
       ];
       break;
